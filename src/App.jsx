@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { Formulario, Mascaranegra, Videofundo, Button, Header, ConteinerPrincipal, CaixaMae, Logo, Mario } from './App.js'
 import './App.js'
+import { Globalstyle } from './styleglobal.js/globalstyle.js';
 import logo from './assets/logo.png';
 import video from './assets/video.mp4'
 import mario from './assets/mario.png'
@@ -9,33 +10,40 @@ function App() {
   return (
     <>
       <Globalstyle />
-      <div>
+      <Header>
         <p>sobre</p>
         <p>trabalhos</p>
         <p>entra em contado</p>
-      </div>
+      </Header>
 
-      <div>
-        <h1>mario e luigi</h1>
-        <img src={logo} alt='logo' />
-        <p>Encanadores Mario & Luigi - Resolvendo Seus Problemas Com Estilo!</p>
+      <ConteinerPrincipal>
 
-        <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos
-          ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos a
-          vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
+        <CaixaMae>
 
-        <button>fale conosco</button>
-      </div>
-      <div>
-        <img src={mario} alt='mario' />
-      </div>
+          <Logo src={logo} alt='logo' />
+          <p>Encanadores Mario & Luigi - Resolvendo Seus Problemas Com Estilo!</p>
 
-      <form>
+          <p>Você já se encontrou em uma situação de emergência com encanamento? Vazamentos inesperados, canos entupidos
+            ou torneiras que não param de pingar? Não se preocupe, porque estamos aqui para salvar o dia! Apresentamos a
+            vocês os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
+
+          <Button>fale conosco</Button>
+
+        </CaixaMae>
+
+        <div>
+          <Mario src={mario} alt='mario' />
+        </div>
+      </ConteinerPrincipal>
+
+      <Videofundo src={video} autoPlay muted loop playsInline alt="video" />
+      <Mascaranegra></Mascaranegra>
+
+      <Formulario >
         <input placeholder='seu nome' type='string'></input>
         <input placeholder='seu telefone' type='estring'></input>
         <textarea placeholder='digite trabalho desejado' type="string"></textarea>
-      </form>
-      <video src={video} alt="video" />
+      </Formulario >
 
     </>
   )
